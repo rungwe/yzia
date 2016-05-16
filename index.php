@@ -12,7 +12,7 @@
   	
 	<title>Yzia</title>
 </head>
-<body style="background-image:url(img/bg2.jpg);background-size:cover">
+<body style="background-image:url(img/bg2.jpg);background-size:cover;background-repeat:no-repeat;">
 	<header class="cd-header">
 		<div id="cd-logo"><img src="img/logo.png" alt="Logo"></div>
 		<div id="cd-action"><a href="" class="btn">Login</a></div>
