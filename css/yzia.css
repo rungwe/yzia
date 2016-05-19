@@ -1,4 +1,8 @@
 
+button {
+	outline-color: white !important;
+}
+
 .cd-phone-frame {
   /* Phone in CSS */
   -webkit-box-sizing: content-box;
