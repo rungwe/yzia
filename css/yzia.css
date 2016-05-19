@@ -1,6 +1,19 @@
 
 button {
 	outline-color: white !important;
+	border-radius:0px;
+	background-color:#ff4081;
+	color:white;
+}
+
+input{
+	outline-color: #ff4081 !important;
+}
+
+textarea:focus, input:focus, .uneditable-input:focus {   
+    border-color: #ff4081 !important;
+    box-shadow: 0 1px 1px #ff4081 inset, 0 0 8px #ff4081 !important;
+    outline: 0 none !important;
 }
 
 .cd-phone-frame {
