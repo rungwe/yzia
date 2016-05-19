@@ -1,0 +1,137 @@
+
+.cd-phone-frame {
+  /* Phone in CSS */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  top: -45px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-color: #2f3246;
+  border-style: solid;
+  border-width: 45px 10px;
+  border-radius: 2.5em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.cd-phone-frame::after, .cd-phone-frame::before {
+  /*these are the iPhone circle elements*/
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #202331;
+  border-radius: 50%;
+}
+.cd-phone-frame::before {
+  height: 11px;
+  width: 11px;
+  top: -28px;
+}
+.cd-phone-frame::after {
+  height: 31px;
+  width: 31px;
+  bottom: -38px;
+}
+
+.cd-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+
+.cd-image-container {
+  /*wrapper for image (and video - desktop only)*/
+  max-width: 226px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.cd-image-container > div {
+  position: relative;
+}
+.cd-image-container img {
+  display: block;
+}
+.cd-image-container video {
+  display: none;
+}
+@media only screen and (min-width: 850px) {
+  .cd-image-container {
+    float: right;
+  }
+  .cd-single-item:nth-child(2n) .cd-image-container {
+    float: left;
+  }
+}
+@media only screen and (min-width: 1070px) {
+  .cd-image-container {
+    height: 402px;
+    width: 35%;
+    float: left;
+    max-width: none;
+    padding-top: 0;
+  }
+  .cd-image-container > div {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .cd-image-container img {
+    height: 402px;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .cd-image-container video {
+    /*not inserted in html - will be loaded through jQuery*/
+    display: block;
+    position: absolute;
+    width: 402px;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    -o-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  }
+  .cd-move-right .cd-image-container img {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  .cd-move-right .cd-image-container video {
+    -webkit-transform: translateX(50%) translateY(-50%) rotate(-90deg);
+    -moz-transform: translateX(50%) translateY(-50%) rotate(-90deg);
+    -ms-transform: translateX(50%) translateY(-50%) rotate(-90deg);
+    -o-transform: translateX(50%) translateY(-50%) rotate(-90deg);
+    transform: translateX(50%) translateY(-50%) rotate(-90deg);
+  }
+}
