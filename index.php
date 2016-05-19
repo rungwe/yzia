@@ -10,7 +10,7 @@
 		
 	</head>
 	
-	<body style="background-image:url(img/bg2.jpg)">
+	<body style="background-image:url(img/bg2.jpg);background-repeat:no-repeat;">
 	
 		
 		<div class="row">
