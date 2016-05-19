@@ -84,7 +84,7 @@
 					<select class="form-control">
 					  <option>Economic ($5)</option>
 					  <option>Standard ($10)</option>
-					  <option>Premium ($115)</option>
+					  <option>Premium ($15)</option>
 					</select>
 				  </div>
 				  <div class="row">
