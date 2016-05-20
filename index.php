@@ -11,7 +11,7 @@
 		
 	</head>
 	
-	<body style="background-image:url(img/bg2.jpg);background-repeat:no-repeat;background-attachment:fixed;">
+	<body style="background-image:url(img/bg2.jpg);background-repeat:no-repeat;background-attachment:fixed;height:100%;">
 	
 		
 		<div class="row">
