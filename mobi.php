@@ -19,7 +19,7 @@
   </div>
 
   <div data-role="main" class="ui-content" >
-	<form method="post" action="demoform.asp">
+	<form method="post" action="payment.php">
 	  <div class="ui-field-contain">
 	  
 		<label for="email">e-mail:</label>
@@ -30,6 +30,16 @@
 		<br>
 		<label for="phone">phone:</label>
 		<input type="tel" name="phone" id="phone">
+		<br>
+		<fieldset class="ui-field-contain">
+        <label for="package">Select Package</label>
+        <select name="package" id="package" data-native-menu="false">
+          <option value="1">On the rush $1</option>
+          <option value="5">Economic $5</option>
+          <option value="10">Standard $10</option>
+		  <option value="15">Premier $15</option>
+        </select>
+      </fieldset>
 		<br>
 		<input type="submit" data-inline="true" value="Proceed to buy">
 		
