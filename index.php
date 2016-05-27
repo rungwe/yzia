@@ -50,7 +50,7 @@
 			
 		</div>
 		
-		<div class="row" style="margin-top:-100%;">
+		<div class="row app-store" style="">
 				<div class="col-sm-offset-3 col-sm-4">
 					<img src="img/googleplay.png" height="80" width="210"/>
 				</div>
@@ -82,9 +82,9 @@
 				  <div class="form-group">
 					<label for="package">Package:</label>
 					<select class="form-control">
-					  <option>Economic ($5)</option>
-					  <option>Standard ($10)</option>
-					  <option>Premium ($15)</option>
+					  <option value="5">Economic ($5)</option>
+					  <option value="10">Standard ($10)</option>
+					  <option value="15">Premium ($15)</option>
 					</select>
 				  </div>
 				  <div class="row">
