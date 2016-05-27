@@ -20,13 +20,13 @@
 	  <div class="ui-field-contain">
 	  
 		<label for="email">e-mail:</label>
-		<input type="email" name="email" id="email" placeholder="Your email..">
+		<input type="email" name="email" id="email" required>
 		<br>
 		<label for="username">username:</label>
-		<input type="text" name="username" id="username">
+		<input type="text" name="username" id="username" required>
 		<br>
 		<label for="phone">phone:</label>
-		<input type="tel" name="phone" id="phone">
+		<input type="tel" name="phone" id="phone" required>
 		<br>
 		<fieldset class="ui-field-contain">
         <label for="package">Select Package</label>

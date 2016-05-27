@@ -68,20 +68,25 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="myModalLabel">Buy Credits</h4>
 			  </div>
+			  <form role="form" action="payment.php" method="POST">
 			  <div class="modal-body">
-				<form role="form">
+				
 				  <div class="form-group">
 					<label for="email">Email address:</label>
-					<input type="email" class="form-control" id="email">
+					<input type="email" name="email" class="form-control" id="email" required>
+				  </div>
+				  <div class="form-group">
+					<label for="username">Username:</label>
+					<input type="text" name="username" class="form-control" id="username" required>
 				  </div>
 				   <div class="form-group">
 					<label for="phone">Phone:</label>
-					<input type="text" class="form-control" id="phone">
+					<input type="text" name="phone" class="form-control" id="phone" required>
 				  </div>
 				  
 				  <div class="form-group">
 					<label for="package">Package:</label>
-					<select class="form-control">
+					<select name="package" class="form-control">
 					  <option value="5">Economic ($5)</option>
 					  <option value="10">Standard ($10)</option>
 					  <option value="15">Premium ($15)</option>
@@ -105,12 +110,13 @@
 					</div>
 					
 				  </div>
-				</form>
+				
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				<button type="button" class="btn">Purchase</button>
+				<button type="submit" class="btn">Purchase</button>
 			  </div>
+			  </form>
 			</div>
 		  </div>
 		</div>
