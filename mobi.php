@@ -19,7 +19,7 @@
   </div>
 
   <div data-role="main" class="ui-content" >
-	<form method="post" action="payment.php">
+	<form method="post" action="payment.php" data-ajax="false">
 	  <div class="ui-field-contain">
 	  
 		<label for="email">e-mail:</label>
