@@ -14,10 +14,7 @@
 <body>
 
 <div data-role="page" data-theme="d" id="pageone" >
-  <div data-role="header">
-  <h1>Yzia Payment</h1>
-  </div>
-
+  
   <div data-role="main" class="ui-content" >
 	<form method="post" action="payment.php" data-ajax="false">
 	  <div class="ui-field-contain">
