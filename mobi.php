@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Include jQuery Mobile stylesheets -->
   <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="themes/yzia-custom.min.css">
+    <link rel="stylesheet" href="themes/yzia-custom2.min.css">
   <!-- Include the jQuery library -->
   <script src="js/jquery-2.1.1.js"></script>
   <!-- Include the jQuery Mobile library -->
@@ -67,6 +67,9 @@
 <style>
 	[data-role=page]{height: 100% !important; position:relative !important;}
 	[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
+	input{
+	outline-color: #ff4081 !important;
+}
 </style>
 </body>
 </html>
