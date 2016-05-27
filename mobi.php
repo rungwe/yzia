@@ -40,19 +40,19 @@
   <div data-role="footer">
 	<div class="ui-grid-d">
 		<div class="ui-block-a">
-			<img src="img/eco.png" height="50"/>
+			<img src="img/eco.png" height="50" width="50"/>
 		</div>
 		<div class="ui-block-b">
-			<img src="img/tele.jpg" height="50"/>
+			<img src="img/tele.jpg" height="50" width="50"/>
 		</div>
 		<div class="ui-block-c">
-			<img src="img/master.png" height="50"/>
+			<img src="img/master.png" height="50" width="50"/>
 		</div>
 		<div class="ui-block-d">
-			<img src="img/visa.png" height="50"/>
+			<img src="img/visa.png" height="50" width="50"/>
 		</div>
 		<div class="ui-block-d">
-			<img src="img/one.jpg" height="50"/>
+			<img src="img/one.jpg" height="50" width="50"/>
 		</div>
 	</div>
   </div>
