@@ -16,8 +16,8 @@
 <div data-role="page" data-theme="d" id="pageone" >
   
   <div data-role="main" class="ui-content" >
-	<center><h1 style="color:#ff4081;">Thank you :)</h1></center>
-	<center><h3 style="color:#ff4081;">transaction completed successfully</h3></center>
+	<center><h1 style="color:#ff4081;">Transaction Cancelled ):</h1></center>
+	
   </div>
 
   <div data-role="footer">

@@ -3,9 +3,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$IntegrationKey = "dc133897-2cf7-453d-af86-fc38a584ea0e";  
+//yzia $IntegrationKey = "dc133897-2cf7-453d-af86-fc38a584ea0e";  
+$IntegrationKey ="5c914668-7efa-450b-b687-0f49775ffaa6";
 $fields =  array( 
-  "id"=>2096,
+  //"id"=>2096,
+  "id"=>2321,
   "reference"=>$_POST["username"]." credit purchase",
   "amount" =>$_POST["package"],
   "additionalinfo"=> $_POST["phone"],
