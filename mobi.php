@@ -23,7 +23,7 @@
 		<input type="email" name="email" id="email" required>
 		<br>
 		<label for="username">username:</label>
-		<input type="text" name="username" id="username" required>
+		<input type="text" name="username" id="username"  value='<?php echo $_REQUEST["username"]; ?>' disabled>
 		<br>
 		<label for="phone">phone:</label>
 		<input type="tel" name="phone" id="phone" required>
