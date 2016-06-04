@@ -2,13 +2,17 @@
  
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
-$IntegrationKey = "dc133897-2cf7-453d-af86-fc38a584ea0e";  
+var_dump($_POST);
+//old id 2096
+//old key "dc133897-2cf7-453d-af86-fc38a584ea0e"
+$id =2350;
+$key = "4481a3d3-610a-476d-9d78-51cb3c034289";
+$IntegrationKey = $key ;  
 $fields =  array( 
-  "id"=>2096,
+  "id"=>$id,
   "reference"=>$_POST["username"]." credit purchase",
   "amount" =>$_POST["package"],
-  "additionalinfo"=> $_POST["phone"],
+  "additionalinfo"=> $_POST["username"],
   "returnurl" =>"https://yzia.herokuapp.com/success.php",
   "resulturl" =>"https://yzia.herokuapp.com/",
   "authemail"=>$_POST["email"],
