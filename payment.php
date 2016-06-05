@@ -14,7 +14,7 @@ $fields =  array(
   "amount" =>$_POST["package"],
   "additionalinfo"=> $_POST["username"],
   "returnurl" =>"https://yzia.herokuapp.com/success.php",
-  "resulturl" =>"https://yzia.herokuapp.com/",
+  "resulturl" =>"https://yzia.herokuapp.com/notification.php",
   "authemail"=>$_POST["email"],
   "status" =>"Message"
   );
