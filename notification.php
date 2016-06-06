@@ -26,11 +26,11 @@ $new_bal = $current+(intval($_POST["amount"]))*100;
 
 $str = json_encode($_POST);
 
-$current_user->setProperty("test",$str);
+$current_user->setProperty("mari",$new_bal);
 
 Backendless::$UserService->update( $current_user );
 
-header("Location: success.php");
+//header("Location: success.php");
 
 /*
 //$last_contact = Backendless::$Persistence->of( 'Users ')->findLast( );
