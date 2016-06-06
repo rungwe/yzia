@@ -49,6 +49,7 @@ function WereCreatingATransaction($values,$integration_key)
     {  
         $msg = ParseMsg($result);  
          echo "transaction status".$msg["status"];
+         //var_dump($msg);
         //first check status, take appropriate action  
         if ($msg["status"] == "Error"){  
             echo $msg["error"];
@@ -67,6 +68,36 @@ function WereCreatingATransaction($values,$integration_key)
             {  
                   
                 $theProcessUrl = $msg["browserurl"];  
+
+                //poll
+                $p = curl_init();  
+  
+                //set the url, number of POST vars, POST data  
+                curl_setopt($p, CURLOPT_URL, $msg["pollurl"]);  
+                curl_setopt($p, CURLOPT_POST, 0);  
+                curl_setopt($p, CURLOPT_POSTFIELDS, '');  
+                curl_setopt($p, CURLOPT_RETURNTRANSFER, 1);  
+                curl_setopt($p, CURLOPT_SSL_VERIFYPEER, false); 
+
+                $poll_result = curl_exec($p);
+                curl_close($p);
+                $poll_data ="";
+                if($poll_result){
+                    
+                    $poll_data = ParseMsg($poll_result);
+                    //var_dump($poll_data);
+                    $MerchantKey =  $integration_key;  
+                    $validateHash = CreateHash($poll_data, $MerchantKey);  
+  
+                    if($validateHash != $poll_data["hash"]){  
+                       echo "unexpected error, security violation";  
+                      // exit;
+                    }  
+                }
+                else{
+                    echo "unexpected error, it could be a network problem";
+                    //exit;
+                }
   
                 /***** IMPORTANT **** 
                 On User has approved paying you, maybe they are awaiting delivery etc 
@@ -78,6 +109,24 @@ function WereCreatingATransaction($values,$integration_key)
                     3. Any other thing 
                  
                 *** END OF IMPORTANT ****/  
+                $query = http_build_query([
+                 'id' => $poll_data['paynowreference'],
+                 'u' => $_POST['username'],
+                 'p' => $_POST['password']
+                ]);
+                
+                $w = curl_init();  
+                $url_write = "https://people.cs.uct.ac.za/~rngkum001/notify.php?".$query;  
+                //echo "<br>".$url_write."<br>";
+                curl_setopt($w, CURLOPT_URL, $url_write);      
+                curl_setopt($w, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($w, CURLOPT_SSL_VERIFYPEER, false);
+                $res = curl_exec($w); 
+
+                //echo $res."  result";
+                curl_close($w);
+                //exit;
+
                   
                               
                   
@@ -167,4 +216,6 @@ function ParseMsg($msg) {
   
         return $result;  
     }  
+
+
 ?>
