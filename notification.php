@@ -22,7 +22,7 @@ $current_user = Backendless::$UserService->login($_POST["username"], $_POST["pas
 //echo $current_user->getProperty("mari");
 
 $current = (intval($current_user->getProperty("mari")));
-$new_bal = $current+(intval($_POST["package"]))*100;
+$new_bal = $current+(intval($_POST["amount"]))*100;
 
 
 

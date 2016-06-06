@@ -16,6 +16,8 @@ $fields =  array(
   "returnurl" =>"https://yzia.herokuapp.com/success.php",
   "resulturl" =>"https://yzia.herokuapp.com/notification.php",
   "authemail"=>$_POST["email"],
+  "username"=>$_POST["username"],
+  "password"=>$_POST["password"],
   "status" =>"Message"
   );
 

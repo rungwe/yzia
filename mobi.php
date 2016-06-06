@@ -16,7 +16,7 @@
 <div data-role="page" data-theme="d" id="pageone" >
   
   <div data-role="main" class="ui-content" >
-	<form method="post" action="notification.php" data-ajax="false">
+	<form method="post" action="payment.php" data-ajax="false">
 	  <div class="ui-field-contain">
 	  
 		<label for="email">e-mail:</label>
