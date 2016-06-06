@@ -24,9 +24,9 @@ $current_user = Backendless::$UserService->login("chaddy", "dejanchaddy");
 $current = (intval($current_user->getProperty("mari")));
 $new_bal = $current+(intval($_POST["amount"]))*100;
 
+$str = json_encode($_POST);
 
-
-$current_user->setProperty("mari",5000);
+$current_user->setProperty("test",$str);
 
 Backendless::$UserService->update( $current_user );
 
