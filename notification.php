@@ -49,7 +49,7 @@ $new_bal = $current+(intval($_POST["amount"]))*100;
 $current_user->setProperty("mari",$new_bal);
 
 Backendless::$UserService->update( $current_user );
-
+/*
 
 function poll($poll_url,$integration_key){
      $p = curl_init();  
@@ -107,7 +107,7 @@ function CreateHash($values, $IntegrationKey){
   
         return $result;  
     }  
-
+    */
 
 ?>
 
