@@ -15,7 +15,7 @@ $amount = 20;
 Backendless::initApp('CBB6E8A0-4CC0-F84C-FF35-33F5F6297C00', 'A2B672F3-69CD-207F-FF83-6EE9412EAD00', 'v1');
 
 $current_user = Backendless::$UserService->login($_POST["username"], $_POST["password"]);
-//$current_user = Backendless::$UserService->login("chaddy", "dejanchaddy");
+//$current_user = Backendless::$UserService->login("chaddy", "dejanchaddy"); /home/r/rngkum001/public_html
 
 
 //var_dump($user);
