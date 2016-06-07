@@ -28,14 +28,18 @@ curl_close($w);
 
 $data = json_decode($res,true);
 
-
+if (file_exists($value)) {
+        unlink($value);
+    } else {
+        // code when file not found
+    }
 
 
     
 Backendless::initApp('CBB6E8A0-4CC0-F84C-FF35-33F5F6297C00', 'A2B672F3-69CD-207F-FF83-6EE9412EAD00', 'v1');
 
 $current_user = Backendless::$UserService->login($data["u"], $data["p"]);
-//$current_user = Backendless::$UserService->login("chaddy", "dejanchaddy"); /home/r/rngkum001/public_html
+//$current_user = Backendless::$UserService->login("chaddy", "dejanchaddy");
 
 
 //var_dump($user);
