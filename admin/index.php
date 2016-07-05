@@ -18,7 +18,7 @@ if(empty($_SESSION)){
     <meta name="author" content="">
 
     <title>Yzia</title>
-
+    <link rel="icon" href="../img/logo.png" />
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -54,7 +54,7 @@ if(empty($_SESSION)){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Yzia Dashboard</a>
+                <a class="navbar-brand" href="">Yzia Dashboard</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
