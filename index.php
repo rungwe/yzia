@@ -135,7 +135,7 @@
 				<form role="form" id="login" method="POST" action="aunthenticate.php">
 				  <div class="form-group">
 					<label for="email">Username:</label>
-					<input type="email" name="username" class="form-control" id="email">
+					<input type="text" name="username" class="form-control" id="email">
 				  </div>
 				  <div class="form-group">
 					<label for="pwd">Password:</label>
