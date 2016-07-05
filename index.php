@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/yzia.css" />
 		<script src="js/jquery-2.1.1.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/validate.js"></script>
 		
 		
 	</head>
@@ -73,7 +74,7 @@
 				
 				  <div class="form-group">
 					<label for="email">Email address:</label>
-					<input type="email" name="email" class="form-control" id="email" required>
+					<input type="email" name="email" class="form-control" id="payment-email" required>
 				  </div>
 				  <div class="form-group">
 					<label for="username">Username:</label>
@@ -131,14 +132,14 @@
 				<h4 class="modal-title" id="myModalLabel">Login as an artist</h4>
 			  </div>
 			  <div class="modal-body">
-				<form role="form">
+				<form role="form" id="login" method="POST" action="aunthenticate.php">
 				  <div class="form-group">
 					<label for="email">Email address:</label>
-					<input type="email" class="form-control" id="email">
+					<input type="email" name="username" class="form-control" id="email">
 				  </div>
 				  <div class="form-group">
 					<label for="pwd">Password:</label>
-					<input type="password" class="form-control" style="outline-color: #ff4081 !mportant;" id="pwd">
+					<input type="password" value="password" class="form-control" style="outline-color: #ff4081 !mportant;" id="pwd">
 				  </div>
 				  <div class="checkbox">
 					<label><input type="checkbox"> Remember me</label>
@@ -148,13 +149,13 @@
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				<button type="button" class="btn">Login</button>
+				<button type="button" class="btn" onclick="login()">Login</button>
 			  </div>
 			</div>
 		  </div>
 		</div>
 		
-		<!-- Modal login-->
+		<!-- Modal Register-->
 		<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="regModal">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -163,7 +164,7 @@
 				<h4 class="modal-title" id="myModalLabel">Artist Registration</h4>
 			  </div>
 			  <div class="modal-body">
-				<form role="form">
+				<form role="form" id="register">
 				  <div class="form-group">
 					<label for="email">Email address:</label>
 					<input type="email" class="form-control" id="reg-email">
