@@ -134,7 +134,7 @@
 			  <div class="modal-body">
 				<form role="form" id="login" method="POST" action="aunthenticate.php">
 				  <div class="form-group">
-					<label for="email">Email address:</label>
+					<label for="email">Username:</label>
 					<input type="email" name="username" class="form-control" id="email">
 				  </div>
 				  <div class="form-group">
