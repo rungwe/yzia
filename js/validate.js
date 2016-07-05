@@ -22,7 +22,7 @@ function login(){
 		          //response from the server
 
 		          var response = xmlhttp.responseText;
-		          alert(response);
+		          //alert(response);
 		          if (response.trim() == "success") {
 		              //alert("successfull login");
 		              window.location.href = "admin/index.php";
